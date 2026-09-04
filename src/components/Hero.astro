@@ -1,0 +1,51 @@
+---
+const roles = ["full-stack dev", "problem braker", "late-night debugger"];
+---
+
+<section id="top" class="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
+    <div class="pointer-events-none absolute inset-0 opacity-20">
+        <div class="absolute left-1/2 top-1/2 h-[40rem] w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-glitch blur-[160px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl text-center">
+        <p class="hero-line mb-4 text-sm tracking-[0.3em] text-glitch">
+            // page not found... just kidding
+        </p>
+        <h1 class="hero-line text-6xl font-black leading-none sm:text-8xl">
+            Four<span class="text-glitch">Uh</span>Oh<span class="text-glitch-2">Four</span>
+        </h1>
+        <p class="hero-line mt-6 text-lg text-muted">
+            I build things for the web and occasionally break them.
+        </p>
+        <div class="hero-line mt-8 flex flex-wrap justify-center gap-3">
+            {
+                roles.map((role) => (
+                    <span class="rounded-full border border-white/10 bg-panel px-4 py-1.5 text-sm text-muted">
+                        { role }
+                    </span>
+                ))
+            }
+        </div>
+
+        <div class="hero-line mt-10 flex justify-center gap-4">
+            <a href="#" class="rounded-md bg-glitch px-6 py-3 text-sm font-bold text-void transition-transform hover:-translate-y-0.5">
+                See the work
+            </a>
+            <a href="#" class="rounded-md border border-white/15 px-6 py-3 text-sm font-bold text-white/90 transition-colors hover:border-glitch hover:text-glitch">
+                Say hi
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    import { gsap } from "gsap";
+
+    gsap.from(".hero-line", {
+        y: 24,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: 0.12
+    });
+</script>

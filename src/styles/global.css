@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+    --color-void: #0a0a0f;
+    --color-glitch: #6ee7ff;
+    --color-glitch-2: #ff4d6d; 
+    --color-muted: #636364;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+:root {
+    color-scheme: dark;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-void);
+    color: #e8e8f0;
+    font-family: var(--font-mono);
+}
+
+::selection {
+    background: var(--color-glitch);
+    color: var(--color-void);
+}
+
+
